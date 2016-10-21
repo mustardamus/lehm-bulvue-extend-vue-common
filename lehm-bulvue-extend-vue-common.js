@@ -8,6 +8,6 @@ module.exports = {
 
   after: function (srcPath, distPath, variables, utils) {
     console.log(utils.Chalk.yellow('Installing dependencies...'))
-    utils.Shell.exec('npm install validator --save')
+    utils.Shell.exec('npm install validator superagent --save')
   }
 }
