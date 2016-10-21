@@ -8,6 +8,10 @@ Your project will be extended with common Vue-App features such as:
 
 - [Validate Mixin](docs/validate-mixin.md) - Helper mixin to easily validate
   forms.
+- [Request Helper](docs/request-helper.md) - A wrapper for making JSON Ajax
+  requests with Jsonwebtoken Authorization.
+- [Notifications](docs/notifications.md) - A whole feature set to have app-wide
+  notifications, easily accessible via actions.
 
 ## Installation
 
