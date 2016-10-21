@@ -1,0 +1,6 @@
+<div class="notify">
+  <div v-for="message in messages" :class="'notification is-' + message.type">
+    <button class="delete" @click="onCloseClick(message)"></button>
+    {{message.content}}
+  </div>
+</div>
