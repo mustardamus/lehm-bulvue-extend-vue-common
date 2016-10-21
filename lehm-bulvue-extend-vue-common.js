@@ -7,7 +7,26 @@ module.exports = {
   ignore: ['README.md'],
 
   after: function (srcPath, distPath, variables, utils) {
-    console.log(utils.Chalk.yellow('Installing dependencies...'))
-    utils.Shell.exec('npm install validator superagent --save')
+    let dependencies = [
+      'validator',
+      'superagent'
+    ]
+    let yesNo = (question) => {
+      return [
+        {
+          type: 'list',
+          name: 'answer',
+          message: question,
+          choices: ['yes', 'no']
+        }
+      ]
+    }
+
+    utils.Inquirer.prompt(yesNo('Install all dependencies')).then((the) => {
+      if (the.answer === 'yes') {
+        console.log(utils.Chalk.yellow('Installing dependencies...'))
+        utils.Shell.exec(`npm install ${dependencies.join(' ')} --save`)
+      }
+    })
   }
 }
