@@ -10,6 +10,8 @@ Your project will be extended with common Vue-App features such as:
   forms.
 - [Request Helper](docs/request-helper.md) - A wrapper for making JSON Ajax
   requests with Jsonwebtoken Authorization.
+- [Request Mocks](docs/request-mocks.md) - Mocking requests for the Request
+  Helper to build API-endpoints without a backend.
 - [Notifications](docs/notifications.md) - A whole feature set to have app-wide
   notifications, easily accessible via actions.
 

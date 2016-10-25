@@ -9,7 +9,8 @@ module.exports = {
   after: function (srcPath, distPath, variables, utils) {
     let dependencies = [
       'validator',
-      'superagent'
+      'superagent',
+      'superagent-mocker'
     ]
     let yesNo = (question) => {
       return [
@@ -26,6 +27,9 @@ module.exports = {
       if (the.answer === 'yes') {
         console.log(utils.Chalk.yellow('Installing dependencies...'))
         utils.Shell.exec(`npm install ${dependencies.join(' ')} --save`)
+      } else {
+        console.log(utils.Chalk.yellow('Okay, but make sure these dependencies are installed:'))
+        console.log(utils.Chalk.green(dependencies.join(', ')))
       }
     })
   }
