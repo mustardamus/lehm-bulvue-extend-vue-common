@@ -6,7 +6,7 @@ module.exports = {
   delimiters: '{% %}',
   ignore: ['README.md'],
 
-  after: function (srcPath, distPath, variables, utils) {
+  after ({ srcPath, distPath, variables, utils }) {
     let dependencies = [
       'validator',
       'superagent',
